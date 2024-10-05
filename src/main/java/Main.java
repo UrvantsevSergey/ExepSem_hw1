@@ -1,7 +1,5 @@
-//поиск числа
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class z1 {
     public static void main(String[] args) {
         ArrayList<Integer> myList = new ArrayList<>();
@@ -117,5 +115,35 @@ public class z3 {
             subArr[i] = arr1[i] - arr2[i]; 
         }
         return subArr;
+    }
+}
+public class z4 {
+    public static void main(String[] args) {
+        int[] arr1 = {6, 12, 25, 16, 5};
+        int[] arr2 = {3, 4, 5, 6, 1};
+
+        try {
+            int[] result = resArr(arr1, arr2);
+            for (int value : result) {
+                System.out.print(value + " ");
+            }
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static int[] resArr(int[] arr1, int[] arr2) {
+        if (arr1.length != arr2.length) {
+            throw new RuntimeException("Массивы должны быть одинаковой длины");
+        }
+
+        int[] resArr = new int[arr1.length];
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr2[i] == 0) {
+                throw new RuntimeException("Во втором массиве на позиции " + i + " находится ноль, деление на ноль невозможно");
+            }
+            resArr[i] = arr1[i] / arr2[i];
+        }
+        return resArr;
     }
 }
