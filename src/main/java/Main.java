@@ -73,3 +73,25 @@ public class Main {
         scanner.close(); 
     }
 }
+public class Main{
+    public static void main(String[] args) {
+        String[][] arr = {{"1", "g", "6"}, {"2", "h", "7"}}; // Исправлено: массив должен быть инициализирован правильно
+        System.out.println(sum2d(arr));
+    }
+
+    public static int sum2d(String[][] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) { // Исправлено: используем arr[i].length для правильного доступа к элементам
+                try {
+                    int val = Integer.parseInt(arr[i][j]); // Пробуем преобразовать строку в число
+                    sum += val; // Добавляем к сумме
+                } catch (NumberFormatException e) {
+                    // Игнорируем, если элемент не является числом
+                }
+            }
+        }
+        return sum;
+    }
+}
+
