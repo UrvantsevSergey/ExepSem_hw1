@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+// задание 1
 public class z1 {
     public static void main(String[] args) {
         ArrayList<Integer> myList = new ArrayList<>();
@@ -71,6 +72,7 @@ public class z1 {
         scanner.close(); 
     }
 }
+// задание 2
 public class z2 {
     public static void main(String[] args) {
         String[][] arr = {{"1", "g", "6"}, {"2", "h", "7"}}; // Исправлено: массив должен быть инициализирован правильно
@@ -92,6 +94,7 @@ public class z2 {
         return sum;
     }
 }
+// задание 3
 public class z3 {
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 3, 4, 5};
@@ -117,6 +120,7 @@ public class z3 {
         return subArr;
     }
 }
+// задание 4
 public class z4 {
     public static void main(String[] args) {
         int[] arr1 = {6, 12, 25, 16, 5};
