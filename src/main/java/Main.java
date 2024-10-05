@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class z1 {
     public static void main(String[] args) {
         ArrayList<Integer> myList = new ArrayList<>();
         int min = 5;
@@ -73,7 +73,7 @@ public class Main {
         scanner.close(); 
     }
 }
-public class Main{
+public class z2 {
     public static void main(String[] args) {
         String[][] arr = {{"1", "g", "6"}, {"2", "h", "7"}}; // Исправлено: массив должен быть инициализирован правильно
         System.out.println(sum2d(arr));
@@ -94,4 +94,28 @@ public class Main{
         return sum;
     }
 }
+public class z3 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3, 4, 5};
+        int[] arr2 = {3, 4, 5, 10, 7};
+        try {
+            int[] result = substrArr(arr1, arr2);
+            for (int value : result) {
+                System.out.print(value + " ");
+            }
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage()); 
+        }
+    }
 
+    public static int[] substrArr(int[] arr1, int[] arr2) {
+        if (arr1.length != arr2.length) {
+            throw new RuntimeException("Массивы должны быть одинаковой длины");
+        }
+        int[] subArr = new int[arr1.length]; 
+        for (int i = 0; i < arr1.length; i++) {
+            subArr[i] = arr1[i] - arr2[i]; 
+        }
+        return subArr;
+    }
+}
