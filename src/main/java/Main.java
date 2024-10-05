@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 // задание 1
-public class z1 {
+public class Main {
     public static void main(String[] args) {
         ArrayList<Integer> myList = new ArrayList<>();
         int min = 5;
@@ -73,7 +73,7 @@ public class z1 {
     }
 }
 // задание 2
-public class z2 {
+public class Main {
     public static void main(String[] args) {
         String[][] arr = {{"1", "g", "6"}, {"2", "h", "7"}}; // Исправлено: массив должен быть инициализирован правильно
         System.out.println(sum2d(arr));
@@ -95,7 +95,7 @@ public class z2 {
     }
 }
 // задание 3
-public class z3 {
+public class Main {
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 3, 4, 5};
         int[] arr2 = {3, 4, 5, 10, 7};
@@ -121,7 +121,7 @@ public class z3 {
     }
 }
 // задание 4
-public class z4 {
+public class Main {
     public static void main(String[] args) {
         int[] arr1 = {6, 12, 25, 16, 5};
         int[] arr2 = {3, 4, 5, 6, 1};
